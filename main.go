@@ -31,6 +31,11 @@ func main() {
 		log.Fatal(err)
 	}
 
+	http.HandleFunc("/reset", func(w http.ResponseWriter, r *http.Request) {
+		counter.Store(0)
+		http.Redirect(w, r, "/", http.StatusSeeOther)
+	})
+
 	http.HandleFunc("/", func(w http.ResponseWriter, r *http.Request) {
 		n := counter.Add(1)
 		payload := struct {

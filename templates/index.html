@@ -54,13 +54,15 @@
             background-color: rgb(31, 31, 31);
         }
     </style>
+    <form id="reset" action="/reset" method="get"></form> 
 </head>
 
 <body>
     <div style="display: flex; justify-content: center;"></div>
     <h2 style="text-align: center;"><code>LZCNT - Count the Number of Leading Zero Bits</code></h2>
     <pre class="listing"><code>
-  <code class="comment"># <a href="https://github.com/hovertank3d/lzcnt.space"><code>[source code]</code></a></code>
+  <code class="comment"># <a href="https://github.com/hovertank3d/lzcnt.space">[source code]</a></code>
+  <code class="comment"># <a href="javascript:{}" onclick="document.getElementById('reset').submit(); return false;">[reset counter]</a></code>
   <code class="label">log2lzcnt:</code>                <code class="comment"># log2lzcnt({{.Requests}});</code>  
   <b><code class="ins">    lzcnt   </code></b><code class="reg">%rdi</code>, <code class="reg">%rdi</code>  
   <code class="ins">    movq    </code><code class="imm">$63</code>,  <code class="reg">%rax</code>  
