@@ -60,6 +60,7 @@
     <div style="display: flex; justify-content: center;"></div>
     <h2 style="text-align: center;"><code>LZCNT - Count the Number of Leading Zero Bits</code></h2>
     <pre class="listing"><code>
+  <code class="comment"># <a href="https://github.com/hovertank3d/lzcnt.space"><code>[source code]</code></a></code>
   <code class="label">log2lzcnt:</code>                <code class="comment"># log2lzcnt({{.Requests}});</code>  
   <b><code class="ins">    lzcnt   </code></b><code class="reg">%rdi</code>, <code class="reg">%rdi</code>  
   <code class="ins">    movq    </code><code class="imm">$63</code>,  <code class="reg">%rax</code>  
@@ -67,8 +68,6 @@
   <code class="ins">    ret     </code>              <code class="comment"># 2^{{.Log2lzcnt}} requests handled</code>  
 
 </code></pre>
-    <div style="text-align: center;"><a href="https://github.com/hovertank3d/lzcnt.space"><code>[source code]</code></a>
-    </div>
     </div>
 </body>
 
