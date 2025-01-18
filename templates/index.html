@@ -19,16 +19,26 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <title>LZCNT</title>
-
-    <form id="reset" action="/reset" method="get"></form>
 </head>
+
+<style>
+    body {
+        background-color: rgb(22,22,22);
+        color: white;
+    }
+</style>
 
 <body>
     <div style="display: flex; justify-content: center;">
-        <h2 style="text-align: center;"><code>LZCNT - Count the Number of Leading Zero Bits</code></h2>
+        <h2 style="text-align: center;"><code><a href="/">LZCNT</a> - {{.Title}}</code></h2>
     </div>
     <div style="width: fit-content; margin-left: auto; margin-right: auto;">
-        {{template "log2.s.html" .}}
+        {{ if eq .Page "log2.s.html" }}
+            {{template "log2.s.html" .}}
+        {{ end }}
+        {{ if eq .Page "about.go.html"}} 
+            {{template "about.go.html" .}}
+        {{ end }}
     </div>
 </body>
 
