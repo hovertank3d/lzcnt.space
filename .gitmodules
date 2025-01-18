@@ -1,0 +1,3 @@
+[submodule "deps/genhl"]
+	path = deps/genhl
+	url = https://github.com/hovertank3d/genhl
